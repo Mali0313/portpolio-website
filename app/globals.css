@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  /* Primary Dark Theme Colors */
+  --primary-dark: #2B1B14;
+  --primary-dark-hover: #38241b;
+  --primary-dark-subtle: #453026;
+
+  /* Accent Colors */
+  --accent: #C9A27E;
+  --accent-hover: #b8916d;
+  --accent-soft: rgba(201, 162, 126, 0.15);
+  /* High contrast accent for small text on light backgrounds (WCAG AA Compliant) */
+  --accent-contrast: #8F6541;
+
+  /* Light & Cream Section Backgrounds */
+  --bg-white: #ffffff;
+  --bg-cream: #FAF7F2;
+  --bg-cream-soft: #F4EFEA;
+
+  /* Text Colors */
+  --text-dark: #2B1B14;
+  --text-body: #4A3B32;
+  --text-muted: #6E5E55;
+  --text-light: #ffffff;
+  --text-cream: #FAF7F2;
+
+  /* Borders & Dividers */
+  --border-light: rgba(43, 27, 20, 0.08);
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-accent: rgba(201, 162, 126, 0.35);
+
+  /* Elevation & Shadows */
+  --shadow-soft: 0 4px 20px -2px rgba(43, 27, 20, 0.04);
+  --shadow-card: 0 8px 30px -4px rgba(43, 27, 20, 0.06);
+}
+
+@theme {
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-dark-hover: var(--primary-dark-hover);
+  --color-primary-dark-subtle: var(--primary-dark-subtle);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-contrast: var(--accent-contrast);
+
+  --color-cream: var(--bg-cream);
+  --color-cream-soft: var(--bg-cream-soft);
+
+  --color-text-dark: var(--text-dark);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-text-light: var(--text-light);
+  --color-text-cream: var(--text-cream);
+
+  --color-border-subtle: var(--border-light);
+  --color-border-dark: var(--border-dark);
+  --color-border-accent: var(--border-accent);
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Thin Scrollbar in Brown & Tan */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A27E;
+  border-radius: 9999px;
+  border: 1.5px solid var(--bg-cream);
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2B1B14;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #C9A27E #FAF7F2;
+}
+
+/* Base Document Styles */
+body {
+  background-color: var(--bg-white);
+  color: var(--text-body);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* Accessible Global Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #C9A27E;
+  outline-offset: 2px;
+}
+
+/* Respect Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
