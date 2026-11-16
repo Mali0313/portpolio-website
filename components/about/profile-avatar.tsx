@@ -27,7 +27,7 @@ export function ProfileAvatar({ name }: ProfileAvatarProps) {
           priority
           sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 420px"
           onError={() => setHasError(true)}
-          className="object-cover object-center transition-transform duration-500 hover:scale-105"
+          className="object-cover object-top transition-transform duration-500 hover:scale-105"
         />
       ) : (
         <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-b from-[#352219] to-[#2B1B14] text-center select-none">

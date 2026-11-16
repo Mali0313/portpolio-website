@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
@@ -55,11 +56,35 @@ export function HeroSection() {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        {/* Profile Avatar Portrait */}
+        <motion.div
+          initial={shouldReduceMotion ? {} : { opacity: 0, scale: 0.88 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="relative mb-5"
+        >
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-accent/40 shadow-soft p-1 bg-gradient-to-br from-accent/20 to-primary-dark">
+            <div className="relative w-full h-full rounded-full overflow-hidden">
+              <Image
+                src="/images/profile.jpg"
+                alt={siteConfig.owner.name || "Muhammad Ali"}
+                fill
+                priority
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
+          <span
+            className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-[#2B1B14] shadow-sm"
+            title="Available for projects &amp; freelance"
+          />
+        </motion.div>
+
         {/* Small Label */}
         <motion.div
           initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm font-medium tracking-wider uppercase text-accent mb-5 sm:mb-6"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
