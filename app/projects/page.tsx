@@ -6,17 +6,17 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Explore full-stack web applications and static sites engineered by Muhammad Ali, including WireDesk, BazaarHub, and Sweet Crust Bakery.",
+    "Explore full-stack web applications, AI platforms, and responsive sites engineered by Muhammad Ali, including NexusAI, WireDesk, BazaarHub, and Sweet Crust Bakery.",
   openGraph: {
     title: "Projects | Muhammad Ali",
     description:
-      "Explore full-stack web applications and static sites engineered by Muhammad Ali, including WireDesk, BazaarHub, and Sweet Crust Bakery.",
+      "Explore full-stack web applications, AI platforms, and responsive sites engineered by Muhammad Ali, including NexusAI, WireDesk, BazaarHub, and Sweet Crust Bakery.",
     url: "/projects",
   },
   twitter: {
     title: "Projects | Muhammad Ali",
     description:
-      "Explore full-stack web applications and static sites engineered by Muhammad Ali, including WireDesk, BazaarHub, and Sweet Crust Bakery.",
+      "Explore full-stack web applications, AI platforms, and responsive sites engineered by Muhammad Ali, including NexusAI, WireDesk, BazaarHub, and Sweet Crust Bakery.",
   },
 };
 

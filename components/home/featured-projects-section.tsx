@@ -25,7 +25,7 @@ export function FeaturedProjectsSection() {
         </FadeUp>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
           {featuredProjects.map((project, index) => (
             <FadeUp key={project.id} delay={index * 0.12}>
               <div className="group relative flex flex-col justify-between h-full bg-cream/30 hover:bg-cream/60 border border-primary-dark/8 rounded-2xl p-5 sm:p-7 transition-all duration-300 hover:shadow-card hover:-translate-y-1">

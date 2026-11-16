@@ -55,6 +55,20 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Mali0313/bakery-shop-website",
     href: "/projects",
   },
+  {
+    id: "nexus-ai",
+    title: "NexusAI",
+    type: "Full-stack AI chatbot platform",
+    category: "AI Web Application",
+    tagline: "Next-Gen Intelligent Chat Assistant",
+    description:
+      "A modern, full-stack AI conversational platform featuring multi-model persona switching (Coding Architect, General Reasoning, Tech Strategist), syntax-highlighted code generation with one-click copy, markdown formatting, persistent chat history, conversation exports, and Google Gemini API integration.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Gemini API"],
+    image: "/images/nexus-ai.png",
+    liveUrl: "http://localhost:3001",
+    githubUrl: "https://github.com/Mali0313/portpolio-website",
+    href: "/projects",
+  },
 ];
 
 // For backward compatibility and home page display
