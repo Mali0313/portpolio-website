@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
+import { AnimatedText } from "@/components/animations";
 
 export function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
@@ -80,45 +81,45 @@ export function HeroSection() {
           />
         </motion.div>
 
-        {/* Small Label */}
+        {/* Small Label (Intro Line) */}
         <motion.div
           initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.4, delay: 0.05 }}
           className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm font-medium tracking-wider uppercase text-accent mb-5 sm:mb-6"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-          {siteConfig.owner.role}
+          <AnimatedText
+            text={siteConfig.owner.role}
+            as="span"
+            delay={0.05}
+            speed={0.08}
+          />
         </motion.div>
 
         {/* Big Heading */}
-        <motion.h1
-          initial={shouldReduceMotion ? {} : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+        <AnimatedText
+          text={`Hi, I'm ${siteConfig.owner.name || "Muhammad Ali"}`}
+          as="h1"
+          delay={0.25}
+          speed={0.12}
           className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-white max-w-4xl leading-[1.15] break-words"
-        >
-          Hi, I&apos;m{" "}
-          <span className="text-white font-normal">
-            {siteConfig.owner.name || "[YOUR FULL NAME]"}
-          </span>
-        </motion.h1>
+        />
 
         {/* Subheading */}
-        <motion.p
-          initial={shouldReduceMotion ? {} : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25 }}
+        <AnimatedText
+          text="I build full-stack websites with React and Next.js, from news platforms to online stores."
+          as="p"
+          delay={0.75}
+          speed={0.08}
           className="mt-5 sm:mt-6 text-base sm:text-xl text-white/85 max-w-2xl font-light leading-relaxed"
-        >
-          I build full-stack websites with React and Next.js, from news platforms to online stores.
-        </motion.p>
+        />
 
         {/* Action Buttons */}
         <motion.div
           initial={shouldReduceMotion ? {} : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
+          transition={{ duration: 0.6, delay: 2.0 }}
           className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 w-full sm:w-auto"
         >
           <Link
@@ -142,7 +143,7 @@ export function HeroSection() {
       <motion.div
         initial={shouldReduceMotion ? {} : { opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
+        transition={{ delay: 2.2, duration: 0.6 }}
         className="absolute bottom-5 sm:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/50 pointer-events-none"
       >
         <span className="text-[10px] sm:text-[11px] tracking-widest uppercase font-medium">Scroll</span>
